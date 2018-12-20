@@ -61,9 +61,9 @@
         <div class="cont w1000">
             <div class="title">
                 <span class="layui-breadcrumb" lay-separator="|">
-          <a href="javascript:;" class="active">设计文章</a>
-          <a href="javascript:;">前端文章</a>
-          <a href="javascript:;">旅游杂记</a>
+          <a href="index.html#list-content" class="active">设计文章</a>
+          <a href="tech.html#list-content">前端文章</a>
+          <a href="travel.html#list-content">旅游杂记</a>
         </span>
             </div>
             <div id="list-content" class="list-item">
@@ -193,7 +193,7 @@
                     count: result.length, //数据总数，从服务端得到
                     limit: 5,
                     jump: function(obj, first) {
-                        console.log("currentPage:" + obj.curr);
+                        // console.log("currentPage:" + obj.curr);
                         showPage(obj);
                     }
                 });
@@ -210,7 +210,7 @@
             if (toIndex > datas.length) {
                 max = datas.length;
             }
-            console.log("from " + fromIndex + " to " + max);
+            // console.log("from " + fromIndex + " to " + max);
             $("#list-content").empty();
             for (var i = fromIndex; i < max; i++) {
                 let obj = datas[i];
